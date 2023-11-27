@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Update Member</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        input {
+            margin: 8px 0;
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+<form action="/member/update" method="post">
+    <input type="hidden" th:value="${updateMember.memberId}" name="memberId"><br>
+    이메일: <input type="text" th:value="${updateMember.memberEmail}" name="memberEmail" readonly> <br>
+    비밀번호: <input type="text" th:value="${updateMember.memberPassword}" name="memberPassword"> <br>
+    이름: <input type="text" th:value="${updateMember.memberName}" name="memberName"> <br>
+    <input type="submit" value="정보수정">
+</form>
+</body>
+
+</html>

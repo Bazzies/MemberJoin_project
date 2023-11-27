@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hoseo Portal Example</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: auto; /* Center the container */
+            max-width: 600px; /* Set a maximum width for the container */
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        p {
+            margin: 30px 0; /* Increase margin-top for spacing */
+        }
+
+        .nav-link {
+            margin: 15px 0; /* Increase margin-top and margin-bottom for spacing */
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Hoseo Portal</h1>
+    <p>기능</p>
+    <p>
+        <a class="nav-link" href="/member/list">회원 정보</a>
+        <a class="nav-link" href="/member/update">내 정보 수정하기</a>
+    </p>
+    <p>
+        <a class="nav-link" href="/member/logout">로그아웃</a>
+    </p>
+    <p style="color: green; font-weight: bold;">로그인이 되었습니다.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 300px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+      text-align: left;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <form action="/member/new" method="post">
+    <h2>회원 가입</h2>
+
+    <div class="form-group">
+      <label for="memberEmail">*이메일</label>
+      <input type="text" id="memberEmail" name="memberEmail" placeholder="이메일을 입력하세요">
+    </div>
+
+    <div class="form-group">
+      <label for="memberPassword">*비밀번호</label>
+      <input type="password" id="memberPassword" name="memberPassword" placeholder="비밀번호를 입력하세요">
+    </div>
+
+    <div class="form-group">
+      <label for="memberName">*닉네임</label>
+      <input type="text" id="memberName" name="memberName" placeholder="닉네임을 입력하세요">
+    </div>
+
+    <button type="submit">회원가입</button>
+  </form>
+</div>
+</body>
+</html>
